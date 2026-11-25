@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sheen home cleaning: clean you can see through</title>
+  <meta name="description" content="Weekly, deep and move-in or move-out home cleaning by cleaners who notice the details. Request a quote in a minute.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Michroma&family=Rethink+Sans:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/media/hero-poster.webp" fetchpriority="high">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" data-nav>
+    <div class="nav__inner container">
+      <a class="wordmark" href="#top" aria-label="Sheen, back to top">Sheen</a>
+      <nav class="nav__links" aria-label="Main">
+        <a href="#services">Services</a>
+        <a href="#details">Our standard</a>
+        <a href="#steps">How it works</a>
+        <a href="#faq">Questions</a>
+      </nav>
+      <a class="btn btn--quiet btn--sm nav__cta" href="#quote">Get a quote</a>
+      <button class="nav__toggle" type="button" aria-expanded="false" aria-controls="nav-menu" data-nav-toggle>
+        <i data-lucide="menu" aria-hidden="true"></i><span class="visually-hidden">Open menu</span>
+      </button>
+    </div>
+    <nav class="nav__menu" id="nav-menu" aria-label="Main, mobile" hidden data-nav-menu>
+      <a href="#services">Services</a>
+      <a href="#details">Our standard</a>
+      <a href="#steps">How it works</a>
+      <a href="#faq">Questions</a>
+      <a href="#quote">Get a quote</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- Hero: the scroll wipes the glass. The video is scrubbed by scroll position. -->
+    <section class="hero" id="top" aria-labelledby="hero-title" data-hero>
+      <div class="hero__stage">
+        <video class="hero__video" muted playsinline preload="none" poster="assets/media/hero-poster.webp"
+               data-src-lg="assets/media/hero-scrub-1080.mp4" data-src-sm="assets/media/hero-scrub-720.mp4"
+               aria-hidden="true" tabindex="-1"></video>
+        <div class="hero__wash" aria-hidden="true"></div>
+        <div class="hero__copy container" data-hero-copy>
+          <h1 class="hero__title" id="hero-title">Clean you can see through.</h1>
+          <p class="hero__lead">Weekly, deep and move-out cleaning by people who notice the details.</p>
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#quote">Get a quote</a>
+            <a class="btn btn--quiet" href="#services">See services</a>
+          </div>
+        </div>
+        <p class="hero__outro" data-hero-outro>Streak-free glass. Every visit.</p>
+      </div>
+    </section>
+
+    <!-- Services -->
+    <section class="section services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="services-title" data-reveal>Pick the clean your home needs.</h2>
+          <p class="section-lead" data-reveal style="--i:1">Book once or keep a standing slot.</p>
+        </div>
+        <ul class="services__grid" role="list">
+          <li data-reveal style="--i:0">
+            <a class="service" href="#quote" data-service="weekly">
+              <figure class="service__photo" data-slot="card-weekly" data-alt="A cleaner in a blue uniform dusting an oak sideboard in a bright living room">
+                <img src="assets/media/card-weekly.webp" width="900" height="1206" loading="lazy" alt="A cleaner in a blue uniform dusting an oak sideboard in a bright living room">
+              </figure>
+              <span class="service__row">
+                <span class="service__name">Weekly home cleaning</span>
+                <i data-lucide="arrow-up-right" class="service__icon" aria-hidden="true"></i>
+              </span>
+              <span class="service__text">Kitchen, bathrooms, floors and dust, on a fixed day.</span>
+            </a>
+          </li>
+          <li data-reveal style="--i:1">
+            <a class="service" href="#quote" data-service="deep">
+              <figure class="service__photo" data-slot="card-deep" data-alt="A cleaner scrubbing around a steel kitchen sink with a sponge">
+                <img src="assets/media/card-deep.webp" width="900" height="1206" loading="lazy" alt="A cleaner scrubbing around a steel kitchen sink with a sponge">
+              </figure>
+              <span class="service__row">
+                <span class="service__name">Deep cleaning</span>
+                <i data-lucide="arrow-up-right" class="service__icon" aria-hidden="true"></i>
+              </span>
+              <span class="service__text">Inside the oven, behind the fridge, along the grout.</span>
+            </a>
+          </li>
+          <li data-reveal style="--i:2">
+            <a class="service" href="#quote" data-service="move">
+              <figure class="service__photo" data-slot="card-move" data-alt="An empty sunlit room with oak floors and moving boxes by the wall">
+                <img src="assets/media/card-move.webp" width="900" height="1206" loading="lazy" alt="An empty sunlit room with oak floors and moving boxes by the wall">
+              </figure>
+              <span class="service__row">
+                <span class="service__name">Move-in and move-out</span>
+                <i data-lucide="arrow-up-right" class="service__icon" aria-hidden="true"></i>
+              </span>
+              <span class="service__text">Empty rooms, top to bottom, before the handover.</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Details: the photo holds while the standard scrolls past -->
+    <section class="section details" id="details" aria-labelledby="details-title">
+      <div class="container details__grid">
+        <figure class="details__photo" data-slot="details-mirror" data-alt="A cleaner polishing a bathroom mirror, her reflection in the glass">
+          <img src="assets/media/details-mirror.webp" width="1400" height="1046" loading="lazy" alt="A cleaner polishing a bathroom mirror, her reflection in the glass">
+        </figure>
+        <div class="details__body">
+          <h2 class="section-title" id="details-title" data-reveal>The corners other cleaners skip.</h2>
+          <p class="section-lead" data-reveal style="--i:1">We plan every visit around the small things.</p>
+          <dl class="standard">
+            <div class="standard__item" data-reveal style="--i:0">
+              <i data-lucide="list-checks" class="standard__icon" aria-hidden="true"></i>
+              <dt>A checklist per room</dt>
+              <dd>Agreed once, ticked off every visit.</dd>
+            </div>
+            <div class="standard__item" data-reveal style="--i:1">
+              <i data-lucide="user-round-check" class="standard__icon" aria-hidden="true"></i>
+              <dt>One cleaner, not a rota</dt>
+              <dd>The same person learns your home.</dd>
+            </div>
+            <div class="standard__item" data-reveal style="--i:2">
+              <i data-lucide="calendar-clock" class="standard__icon" aria-hidden="true"></i>
+              <dt>Your schedule</dt>
+              <dd>Weekly, fortnightly or once.</dd>
+            </div>
+            <div class="standard__item" data-reveal style="--i:3">
+              <i data-lucide="spray-can" class="standard__icon" aria-hidden="true"></i>
+              <dt>Products you approve</dt>
+              <dd>Our kit, or yours.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Before and after: the visitor does the wiping -->
+    <section class="section results" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="results-title" data-reveal>Same kitchen, before and after.</h2>
+          <p class="section-lead" data-reveal style="--i:1">Drag the handle across the photo to compare.</p>
+        </div>
+        <div class="compare" data-compare style="--split: 50%">
+          <figure class="compare__layer compare__after" data-slot="kitchen-after" data-alt="The kitchen after cleaning: clear marble island, glossy oak floor">
+            <img src="assets/media/kitchen-after.webp" width="1920" height="1072" loading="lazy" alt="The kitchen after cleaning: clear marble island, glossy oak floor">
+          </figure>
+          <figure class="compare__layer compare__before" data-slot="kitchen-before" data-alt="The same kitchen before cleaning: dishes on the island, crumbs and a towel on the floor">
+            <img src="assets/media/kitchen-before.webp" width="1920" height="1072" loading="lazy" alt="The same kitchen before cleaning: dishes on the island, crumbs and a towel on the floor">
+          </figure>
+          <span class="compare__tag compare__tag--before" aria-hidden="true">Before</span>
+          <span class="compare__tag compare__tag--after" aria-hidden="true">After</span>
+          <span class="compare__line" aria-hidden="true"><span class="compare__knob"><i data-lucide="chevrons-left-right" aria-hidden="true"></i></span></span>
+          <label class="visually-hidden" for="compare-range">Show more of the kitchen before or after cleaning</label>
+          <input class="compare__range" id="compare-range" type="range" min="0" max="100" value="50" step="1" data-compare-range>
+        </div>
+      </div>
+    </section>
+
+    <!-- Steps -->
+    <section class="section steps" id="steps" aria-labelledby="steps-title">
+      <div class="container">
+        <div class="section-head">
+          <h2 class="section-title" id="steps-title" data-reveal>Booked in three steps.</h2>
+        </div>
+        <ol class="steps__list">
+          <li class="step" data-reveal style="--i:0">
+            <h3 class="step__title">Tell us about your home</h3>
+            <p class="step__text">Rooms, bathrooms, pets, anything we should know.</p>
+          </li>
+          <li class="step" data-reveal style="--i:1">
+            <h3 class="step__title">Pick a day and time</h3>
+            <p class="step__text">We confirm the slot by message.</p>
+          </li>
+          <li class="step" data-reveal style="--i:2">
+            <h3 class="step__title">Come home to it done</h3>
+            <p class="step__text">Walk in, check our work.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section faq" id="faq" aria-labelledby="faq-title">
+      <div class="container faq__grid">
+        <div class="faq__head">
+          <h2 class="section-title" id="faq-title" data-reveal>Questions before you book.</h2>
+        </div>
+        <div class="faq__list">
+          <details class="qa">
+            <summary><span>What does a standard clean cover?</span><i data-lucide="plus" class="qa__icon" aria-hidden="true"></i></summary>
+            <p>Dusting, counters, bathrooms, floors and bins, plus anything on your checklist.</p>
+          </details>
+          <details class="qa">
+            <summary><span>Do I need to be home?</span><i data-lucide="plus" class="qa__icon" aria-hidden="true"></i></summary>
+            <p>No. Leave a key or a door code.</p>
+          </details>
+          <details class="qa">
+            <summary><span>Do you bring the products?</span><i data-lucide="plus" class="qa__icon" aria-hidden="true"></i></summary>
+            <p>Yes, our own kit, or yours if you prefer.</p>
+          </details>
+          <details class="qa">
+            <summary><span>How is the price set?</span><i data-lucide="plus" class="qa__icon" aria-hidden="true"></i></summary>
+            <p>Home size, type of clean and how often.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Quote -->
+    <section class="section quote" id="quote" aria-labelledby="quote-title">
+      <div class="container quote__grid">
+        <div class="quote__head">
+          <h2 class="section-title" id="quote-title" data-reveal>Get a quote for your home.</h2>
+          <p class="section-lead" data-reveal style="--i:1">Tell us the basics. We reply with a price and the first free slot.</p>
+        </div>
+        <form class="form" data-endpoint="" novalidate data-quote-form>
+          <div class="field">
+            <label for="q-name">Your name</label>
+            <input id="q-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="field">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+          </div>
+          <div class="field">
+            <label for="q-service">Type of clean</label>
+            <select id="q-service" name="service" data-service-select>
+              <option value="weekly">Weekly home cleaning</option>
+              <option value="deep">Deep cleaning</option>
+              <option value="move">Move-in or move-out</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="q-size">Size of home</label>
+            <select id="q-size" name="size">
+              <option>Studio</option>
+              <option>1 bedroom</option>
+              <option selected>2 bedrooms</option>
+              <option>3 bedrooms</option>
+              <option>4 or more, or a house</option>
+            </select>
+          </div>
+          <div class="form__foot">
+            <button class="btn btn--primary" type="submit">Request a quote</button>
+            <p class="form__help" id="quote-help" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <a class="wordmark" href="#top" aria-label="Sheen, back to top">Sheen</a>
+      <nav class="footer__links" aria-label="Footer">
+        <a href="#services">Services</a>
+        <a href="#details">Our standard</a>
+        <a href="#steps">How it works</a>
+        <a href="#faq">Questions</a>
+        <a href="#quote">Get a quote</a>
+      </nav>
+      <p class="footer__meta">© 2026 Sheen home cleaning</p>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
+  <script src="assets/js/main.js" defer></script>
+  <script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
+document.querySelectorAll('[data-slot] img').forEach((i) => { if (i.complete && !i.naturalWidth) i.remove(); else i.addEventListener('error', () => i.remove(), { once: true }); });</script>
+</body>
+</html>

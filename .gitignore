@@ -1,0 +1,14 @@
+# secrets — never commit
+password.md
+
+# firecrawl local cache
+.firecrawl/
+
+# local working notes and tooling (not for the public preview repo)
+PROGRESS.md
+.claude/
+.hallmark/
+
+# large source originals
+assets/src/
+.DS_Store
