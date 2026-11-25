@@ -87,11 +87,15 @@
   root.classList.add('is-scrub');
 
   const src = matchMedia('(min-width: 60rem)').matches ? video.dataset.srcLg : video.dataset.srcSm;
-  // Load the whole file once so every seek is local and instant.
+  // Stream at once so the scrub works from the first second,
+  // then swap to an in-memory copy so every seek is local and instant.
+  video.preload = 'auto';
+  video.src = src;
   fetch(src).then((r) => r.blob()).then((blob) => {
+    const t = video.currentTime;
+    video.addEventListener('loadedmetadata', () => { video.currentTime = t; }, { once: true });
     video.src = URL.createObjectURL(blob);
-    video.load();
-  }).catch(() => { video.src = src; });
+  }).catch(() => {});
 
   // iOS Safari paints seeks only after one play() from a gesture.
   const unlock = () => { video.play().then(() => video.pause()).catch(() => {}); };
