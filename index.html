@@ -42,9 +42,8 @@
     <!-- Hero: the scroll wipes the glass. The video is scrubbed by scroll position. -->
     <section class="hero" id="top" aria-labelledby="hero-title" data-hero>
       <div class="hero__stage">
-        <video class="hero__video" muted playsinline preload="none" poster="assets/media/hero-poster.webp"
-               data-src-lg="assets/media/hero-scrub-1080.mp4" data-src-sm="assets/media/hero-scrub-720.mp4"
-               aria-hidden="true" tabindex="-1"></video>
+        <img class="hero__poster" src="assets/media/hero-poster.webp" width="1920" height="1080" alt="" fetchpriority="high" aria-hidden="true">
+        <canvas class="hero__canvas" aria-hidden="true" data-hero-canvas></canvas>
         <div class="hero__wash" aria-hidden="true"></div>
         <div class="hero__copy container" data-hero-copy>
           <h1 class="hero__title" id="hero-title">Clean you can see through.</h1>
@@ -55,6 +54,7 @@
           </div>
         </div>
         <p class="hero__outro" data-hero-outro>Streak-free glass. Every visit.</p>
+        <p class="hero__cue" aria-hidden="true" data-hero-cue><span class="hero__cue-line"></span>Scroll to wipe the glass</p>
       </div>
     </section>
 
@@ -62,7 +62,7 @@
     <section class="section services" id="services" aria-labelledby="services-title">
       <div class="container">
         <div class="section-head">
-          <h2 class="section-title" id="services-title" data-reveal>Pick the clean your home needs.</h2>
+          <h2 class="section-title" id="services-title" data-split>Pick the clean your home needs.</h2>
           <p class="section-lead" data-reveal style="--i:1">Book once or keep a standing slot.</p>
         </div>
         <ul class="services__grid" role="list">
@@ -113,7 +113,7 @@
           <img src="assets/media/details-mirror.webp" width="1400" height="1046" loading="lazy" alt="A cleaner polishing a bathroom mirror, her reflection in the glass">
         </figure>
         <div class="details__body">
-          <h2 class="section-title" id="details-title" data-reveal>The corners other cleaners skip.</h2>
+          <h2 class="section-title" id="details-title" data-split>The corners other cleaners skip.</h2>
           <p class="section-lead" data-reveal style="--i:1">We plan every visit around the small things.</p>
           <dl class="standard">
             <div class="standard__item" data-reveal style="--i:0">
@@ -145,7 +145,7 @@
     <section class="section results" id="results" aria-labelledby="results-title">
       <div class="container">
         <div class="section-head">
-          <h2 class="section-title" id="results-title" data-reveal>Same kitchen, before and after.</h2>
+          <h2 class="section-title" id="results-title" data-split>Same kitchen, before and after.</h2>
           <p class="section-lead" data-reveal style="--i:1">Drag the handle across the photo to compare.</p>
         </div>
         <div class="compare" data-compare style="--split: 50%">
@@ -168,7 +168,7 @@
     <section class="section steps" id="steps" aria-labelledby="steps-title">
       <div class="container">
         <div class="section-head">
-          <h2 class="section-title" id="steps-title" data-reveal>Booked in three steps.</h2>
+          <h2 class="section-title" id="steps-title" data-split>Booked in three steps.</h2>
         </div>
         <ol class="steps__list">
           <li class="step" data-reveal style="--i:0">
@@ -191,7 +191,7 @@
     <section class="section faq" id="faq" aria-labelledby="faq-title">
       <div class="container faq__grid">
         <div class="faq__head">
-          <h2 class="section-title" id="faq-title" data-reveal>Questions before you book.</h2>
+          <h2 class="section-title" id="faq-title" data-split>Questions before you book.</h2>
         </div>
         <div class="faq__list">
           <details class="qa">
@@ -218,7 +218,7 @@
     <section class="section quote" id="quote" aria-labelledby="quote-title">
       <div class="container quote__grid">
         <div class="quote__head">
-          <h2 class="section-title" id="quote-title" data-reveal>Get a quote for your home.</h2>
+          <h2 class="section-title" id="quote-title" data-split>Get a quote for your home.</h2>
           <p class="section-lead" data-reveal style="--i:1">Tell us the basics. We reply with a price and the first free slot.</p>
         </div>
         <form class="form" data-endpoint="" novalidate data-quote-form>
@@ -271,8 +271,10 @@
     </div>
   </footer>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/SplitText.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.3.27/dist/lenis.min.js" defer></script>
   <script src="https://unpkg.com/lucide@0.460.0/dist/umd/lucide.min.js" defer></script>
   <script src="assets/js/main.js" defer></script>
   <script>window.hallmarkSlots = (m) => { for (const [k, v] of Object.entries(m)) { const s = document.querySelector(`[data-slot="${k}"]`); if (!s) continue; const im = new Image(); im.src = typeof v === 'string' ? v : v.src; im.alt = (typeof v === 'object' && v.alt) || s.dataset.alt || ''; s.querySelectorAll(':scope > img').forEach((o) => o.remove()); s.prepend(im); } };
